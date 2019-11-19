@@ -42,11 +42,9 @@ class MainActivity : BaseActivity() {
                     for (i in 0..banks.length()) {
                         val bankJsonObject = banks.getJSONObject(i)
 
-                        
-
+                        val bankData = Bank.getBankFromJsonObject(bankJsonObject)
+                        bankList.add(bankData)
                     }
-
-
                 }
                 else {
                     Toast.makeText(mContext, "서버 통신에 문제가 있습니다.", Toast.LENGTH_SHORT).show()
