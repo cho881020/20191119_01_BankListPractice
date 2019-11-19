@@ -2,8 +2,11 @@ package com.tjoeun.a20191119_01_banklistpractice
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.tjoeun.a20191119_01_banklistpractice.datas.Bank
 
 class MainActivity : BaseActivity() {
+    
+    var bankList = ArrayList<Bank>()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -17,7 +20,20 @@ class MainActivity : BaseActivity() {
     }
 
     override fun setValues() {
+        getBanksFromServer()
+    }
+
+    fun getBanksFromServer() {
 
     }
 
 }
+
+
+
+
+
+
+
+
+
